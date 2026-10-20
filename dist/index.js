@@ -1,12 +1,12 @@
 "use strict";
+// let nome: string = "Mundo";
 Object.defineProperty(exports, "__esModule", { value: true });
-let nome = "Mundo";
-console.log(`Olá, ${nome}!`);
-const exemplo = {
-    nome: "Fabio",
-    saldo: 3000,
+const contaTitular = {
+    titular: "Chico",
+    saldo: 1000000,
 };
-function deposito(saldoCliente, valorDeposito) {
-    return saldoCliente + valorDeposito;
+function saque(saldoAtual, valorSaque) {
+    return saldoAtual - valorSaque;
 }
-console.log(deposito(exemplo.saldo, 152));
+const saldoFinal = saque(contaTitular.saldo, 500);
+console.log(`Saldo de ${contaTitular.titular}: ${saldoFinal}`);
